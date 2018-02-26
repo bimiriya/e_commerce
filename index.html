@@ -263,7 +263,10 @@
         {{/each}}
         {{#each price}}
         <li>Precio: ${{price}}</li>        
-        {{/each}}
+				{{/each}}
+				{{#each id}}
+				<li><button class="btn btn-warning" data-id="{{{id}}}">View</button></li>
+				{{/each}}
     </ul>
   </script>
     <script src="./assets/js/products.js"></script>
