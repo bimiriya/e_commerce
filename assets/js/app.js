@@ -4,8 +4,9 @@
   function init() {
     let router = new Router([
       new Route('home', 'home.html', true),
+      new Route('deco', 'deco.html'),
       new Route('art', 'art.html'),
-      new Route('product_info', 'product_info.html')
+      new Route('productinfo', 'productinfo.html')
     ]);
   }
   init();

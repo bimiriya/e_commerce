@@ -69,8 +69,26 @@
 		</div>		
 	</section>
 	<section>
-		<a href="#product_info" class="enjaja" data-id="MLC441119392">enjaja</a>
+		
+	<section id="payment">
+		<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  PAGA! 
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <a href="views/index.ejs">Paga porfavor porfavor T-T</a>
+      </div>
+    </div>
+  </div>
+</div>
 	</section>
+
+	<a href="#productinfo" class="enjaja" data-id="MLC441119392">enjaja</a>
 
 	<div id="app">
 
@@ -82,8 +100,20 @@
 	<script src="/__/firebase/init.js"></script>
 	<script src="./assets/js/route.js"></script>
 	<script src="./assets/js/router.js"></script>
-	<script src="assets/js/app.js"></script>
-	<script src="assets/js/product_info.js"></script>
+	<script src="assets/js/handlebars-v4.0.11.js"></script>
+	
+	<script id="product-template" type="text/x-handlebars-template">
+
+		{{data}}
+		<h1>{{title}}</h1>
+		<h2>Available quantity: {{available_quantity}}</h2>
+
+	  </script>
+	  <script src="assets/js/productinfo.js"></script>
+	
+	  <script src="assets/js/main.js"></script>
+	
+	
 	
 </body>
 </html>

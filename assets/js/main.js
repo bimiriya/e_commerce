@@ -8,7 +8,7 @@
     let router = new Router([
       new Route('deco', 'deco.html', true),
       new Route('art', 'art.html'),
-      new Route('product_info', 'product_info.html')
+      new Route('productinfo', 'productinfo.html')
     ]);
   }
   init();

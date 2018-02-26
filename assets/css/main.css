@@ -6,7 +6,7 @@
 #freeShipping{
   background-color: black;
 }
-#freeShipping a, p{
+#freeShipping a, #freeShipping p{
   color: white;
   font-size: 14px;
   padding: 1vh 0 0 0; 
