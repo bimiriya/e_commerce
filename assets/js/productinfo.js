@@ -1,4 +1,4 @@
-const accessToken = 'APP_USR-8189733489067517-022609-dbb65fa3af87dc450a542a72ff1f32f1__E_N__-239442426';
+const accessToken = 'APP_USR-8189733489067517-022616-f503fa00109170e4073113e15b23d6e4__G_A__-239442426';
 
 $('.enjaja').click((event) => {
   let dataID = $(event.target).data('id');
@@ -11,8 +11,9 @@ function getProductInfo(productID) {
       return response.json();
     })
     .then((data) => {
+      console.log(data)
       fillTemplate(data);
-      console.log(data.title);
+      $('#productModal').modal();
     });
 }
 
@@ -21,7 +22,7 @@ function fillTemplate(data) {
   let compiledTemplate = Handlebars.compile(rawTemplate);
   let generatedHTML = compiledTemplate(data);
 
-  const app = document.getElementById('app');
+  const app = document.getElementById('here');
   app.innerHTML = generatedHTML;
 }
 
