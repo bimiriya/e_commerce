@@ -2,22 +2,35 @@
 
 // Mercadopago.createToken(form, tokenHandler);
 
+// ----------------------------- INICIO ROUTING
+(function() {
+  function init() {
+    let router = new Router([
+      new Route('deco', 'deco.html', true),
+      new Route('art', 'art.html'),
+    ]);
+  }
+  init();
+}());
+// ----------------------------- FIN ROUTING
+
+// ----------------------------- INICIO FIREBASE
+
 function eCommerce() {
-	this.signInButton = document.getElementById('signIn');
-	this.signOutButton= document.getElementById('signOut');
-	this.signInButton.addEventListener('click', this.signIn.bind(this));
-	this.signOutButton.addEventListener('click', this.signOut.bind(this));
-	this.initFirebase();
+  this.signInButton = document.getElementById('signIn');
+  this.signOutButton = document.getElementById('signOut');
+  this.signInButton.addEventListener('click', this.signIn.bind(this));
+  this.signOutButton.addEventListener('click', this.signOut.bind(this));
+  this.initFirebase();
 };
 
 eCommerce.prototype.signIn = function() {
-	var provider = new firebase.auth.GoogleAuthProvider();
-	this.auth.signInWithPopup(provider);
-	
+  var provider = new firebase.auth.GoogleAuthProvider();
+  this.auth.signInWithPopup(provider);
 };
 
 eCommerce.prototype.signOut = function() {
-	this.auth.signOut();
+  this.auth.signOut();
 };
 
 eCommerce.prototype.initFirebase = function() {
@@ -29,14 +42,13 @@ eCommerce.prototype.initFirebase = function() {
 eCommerce.prototype.onAuthStateChanged = function(user) {
   if (user) { // User is signed in!
     console.log('conectado');
-   } else {
+  } else {
    	console.log('desconectado');
-   }
+  }
 };
 
 window.onload = function() {
-	myeCommerce = new eCommerce();
+  myeCommerce = new eCommerce();
 };
 
-
-
+// ---------------------------------------- FIN FIREBASE
