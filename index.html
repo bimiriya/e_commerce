@@ -25,7 +25,7 @@
 	<nav class="container">
 		<div class="row">
 			<div class="col-2">
-				<a href=""><img src="./assets/img/fab_logo.png" alt=""></a>				
+				<a href="#deco"><img src="./assets/img/fab_logo.png" alt=""></a>				
 			</div>
 			<div class="col-6">
 				<form>
@@ -52,18 +52,17 @@
 		</div>
 	</nav>
 
-
 	<section class="container">
 		<div class="row">
 			<div class="col">
 				<ul>
-					<li><a href="#new">NEW ARRIVALS</a></li>
-					<li><a href="#deco">DECO</a></li>
-					<li><a href="#art">ART</a></li>
-					<li><a href="#tech">TECH</a></li>
-					<li><a href="#gifts">GIFTS</a></li>
-					<li><a href="#adults">ADULTS ONLY</a></li>
-					<li><a href="#journal">JOURNAL</a></li>
+					<li><a href="#new" id="vintageBtn">VINTAGE</a></li>
+					<li><a href="#homeDeco" id="homeDecoBtn">DECO</a></li>
+					<li><a href="#art" id="artBtn">ART</a></li>
+					<li><a href="#tech" id="techBtn">TECH</a></li>
+					<li><a href="#gifts" id="booksBtn">BOOKS</a></li>
+					<li><a href="#adults" id="adultsBtn">ADULTS ONLY</a></li>
+					<li><a href="https://blog.fab.com/?ref=subnav" target="_blank">JOURNAL</a></li>
 				</ul>
 			</div>
 		</div>		
@@ -94,9 +93,30 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="/__/firebase/init.js"></script>
+
+  <script src="./assets/js/handlebars-v4.0.11.js"></script>
+
+  <script id="quote-template" type="text/x-handlebars-template">
+
+    <ul class="products">
+        {{#each thumb}}
+        <li><img src="{{{thumbnail}}}" alt=""></li>
+        {{/each}}
+        {{#each decoHome}}
+        <li>{{decoHome}}</li>
+        {{/each}}
+        {{#each available}}
+        <li>Cantidad disponible: {{available}}</li>
+        {{/each}}
+        {{#each price}}
+        <li>Precio: ${{price}}</li>        
+        {{/each}}
+    </ul>
+  </script>
+	<script src="./assets/js/products.js"></script>
 	<script src="./assets/js/route.js"></script>
 	<script src="./assets/js/router.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script src="./assets/js/main.js"></script>
 	
 </body>
 </html>
