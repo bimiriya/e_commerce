@@ -38,7 +38,9 @@ function showVintage() {
           available: [
             {available: data.results[i].available_quantity}],
           price: [
-            {price: data.results[i].price}]          
+            {price: data.results[i].price}],
+          id: [
+            {id: data.results[i].id}] 
         });
         document.getElementById('app').innerHTML += quoteData;
       };
@@ -61,7 +63,9 @@ function showDeco() {
           available: [
             {available: data.results[i].available_quantity}],
           price: [
-            {price: data.results[i].price}]          
+            {price: data.results[i].price}],
+          id: [
+            {id: data.results[i].id}] 
         });
         document.getElementById('app').innerHTML += quoteData;
       };
@@ -84,7 +88,9 @@ function showArt() {
           available: [
             {available: data.results[i].available_quantity}],
           price: [
-            {price: data.results[i].price}]          
+            {price: data.results[i].price}],
+          id: [
+            {id: data.results[i].id}] 
         });
         document.getElementById('app').innerHTML += quoteData;
       };
@@ -107,7 +113,9 @@ function showTech() {
           available: [
             {available: data.results[i].available_quantity}],
           price: [
-            {price: data.results[i].price}]          
+            {price: data.results[i].price}],
+          id: [
+            {id: data.results[i].id}] 
         });
         document.getElementById('app').innerHTML += quoteData;
       };
@@ -130,7 +138,9 @@ function showBooks() {
           available: [
             {available: data.results[i].available_quantity}],
           price: [
-            {price: data.results[i].price}]          
+            {price: data.results[i].price}],
+          id: [
+            {id: data.results[i].id}]          
         });
         document.getElementById('app').innerHTML += quoteData;
       };
@@ -153,7 +163,9 @@ function showAdults() {
           available: [
             {available: data.results[i].available_quantity}],
           price: [
-            {price: data.results[i].price}]          
+            {price: data.results[i].price}],
+          id: [
+            {id: data.results[i].id}]          
         });
         document.getElementById('app').innerHTML += quoteData;
       };
