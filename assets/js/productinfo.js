@@ -25,17 +25,3 @@ function fillTemplate(data) {
   const app = document.getElementById('here');
   app.innerHTML = generatedHTML;
 }
-
-/*
-function fillTemplate(data) {
-  const quoteInfo = document.getElementById('quote-template').innerHTML;
-      const template = Handlebars.compile(quoteInfo);
-      let quoteData = template({
-        cat: [
-          {cater: data.title}
-        ]
-      })
-}
-
-document.getElementById('aparece').innerHTML += quoteData;
-*/

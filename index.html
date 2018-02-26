@@ -28,42 +28,40 @@
     </div>
   </section>
   <nav class="container">
-    <div class="row">
-      <div class="col-2">
-        <a href="">
-          <img src="./assets/img/fab_logo.png" alt="">
-        </a>
-      </div>
-      <div class="col-6">
-        <form>
-          <div class="form-row align-items-center">
-            <div class="col-auto">
-              <label class="sr-only" for="inlineFormInputGroup">Username</label>
-              <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fas fa-search"></i>
-                  </div>
+    <div class="col-2">
+      <a href="#deco">
+        <img src="./assets/img/fab_logo.png" alt="">
+      </a>
+    </div>
+    <div class="col-6">
+      <form>
+        <div class="form-row align-items-center">
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fas fa-search"></i>
                 </div>
-                <input type="text" class="form-control whatShopping" id="inlineFormInputGroup" placeholder="What are you shopping for?">
-                <div class="input-group-append">
-                  <div class="input-group-text">
-                    <i class="far fa-smile"></i>
-                  </div>
+              </div>
+              <input type="text" class="form-control whatShopping" id="inlineFormInputGroup" placeholder="What are you shopping for?">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <i class="far fa-smile"></i>
                 </div>
               </div>
             </div>
           </div>
-        </form>
-      </div>
-      <div>
-        <li>
-          <a href="" id="signIn">Sigin</a>
-        </li>
-        <li>
-          <a href="" id="signOut">Signout</a>
-        </li>
-      </div>
+        </div>
+      </form>
+    </div>
+    <div>
+      <li>
+        <a href="" id="signIn">Sigin</a>
+      </li>
+      <li>
+        <a href="" id="signOut">Signout</a>
+      </li>
     </div>
   </nav>
 
@@ -191,14 +189,87 @@
             </table>
 
           </div>
-			</div>
+			
 
 	  </script>
     <script src="assets/js/productinfo.js"></script>
 
-    <script src="assets/js/main.js"></script>
+
+    <section class="container">
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>
+              <a href="#new" id="vintageBtn">VINTAGE</a>
+            </li>
+            <li>
+              <a href="#homeDeco" id="homeDecoBtn">DECO</a>
+            </li>
+            <li>
+              <a href="#art" id="artBtn">ART</a>
+            </li>
+            <li>
+              <a href="#tech" id="techBtn">TECH</a>
+            </li>
+            <li>
+              <a href="#gifts" id="booksBtn">BOOKS</a>
+            </li>
+            <li>
+              <a href="#adults" id="adultsBtn">ADULTS ONLY</a>
+            </li>
+            <li>
+              <a href="https://blog.fab.com/?ref=subnav" target="_blank">JOURNAL</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="payment">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        PAGA!
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <a href="views/index.ejs">Paga porfavor porfavor T-T</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
+    </div>
+
+
+
+
+
+    <script id="quote-template" type="text/x-handlebars-template">
+
+    <ul class="products">
+        {{#each thumb}}
+        <li><img src="{{{thumbnail}}}" alt=""></li>
+        {{/each}}
+        {{#each decoHome}}
+        <li>{{decoHome}}</li>
+        {{/each}}
+        {{#each available}}
+        <li>Cantidad disponible: {{available}}</li>
+        {{/each}}
+        {{#each price}}
+        <li>Precio: ${{price}}</li>        
+        {{/each}}
+    </ul>
+  </script>
+    <script src="./assets/js/products.js"></script>
+    <script src="./assets/js/route.js"></script>
+    <script src="./assets/js/router.js"></script>
+    <script src="./assets/js/main.js"></script>
 
 </body>
 
