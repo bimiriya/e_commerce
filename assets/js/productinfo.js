@@ -24,4 +24,5 @@ function fillTemplate(data) {
 
   const app = document.getElementById('here');
   app.innerHTML = generatedHTML;
+  console.log(data);
 }

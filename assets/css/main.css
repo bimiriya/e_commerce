@@ -62,7 +62,6 @@ nav a, .show a, .someCategories a{
   text-decoration: none;  
   margin: 0 0.2vh;
   color: black;
-
 }
 
 .departaments li{
@@ -76,8 +75,6 @@ nav a, .show a, .someCategories a{
 }
 
 /* --------- FIN PAGINA DECO */
-  text-decoration: none;
-}
 
 .show {
   border : 1px solid  #F0F8FF;
