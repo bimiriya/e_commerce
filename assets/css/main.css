@@ -75,3 +75,8 @@ nav a, .show a, .someCategories a{
 }
 
 /* --------- FIN PAGINA DECO */
+
+.show {
+  border : 1px solid  #F0F8FF;
+  text-align: center;
+}
