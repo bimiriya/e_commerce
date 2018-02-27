@@ -18,7 +18,7 @@ function getProductInfo(productID) {
 }
 
 function fillTemplate(data) {
-  const rawTemplate = document.getElementById('product-template').innerHTML;
+  let rawTemplate = document.getElementById('product-template').innerHTML;
   let compiledTemplate = Handlebars.compile(rawTemplate);
   let generatedHTML = compiledTemplate(data);
 
