@@ -3,10 +3,11 @@
 // Mercadopago.createToken(form, tokenHandler);
 
 // ----------------------------- INICIO ROUTING
-
 (function() {
   function init() {
     let router = new Router([
+      new Route('deco', 'deco.html', true),
+      new Route('art', 'art.html'),
       new Route('deco', 'deco.html', true)
     ]);
   }
