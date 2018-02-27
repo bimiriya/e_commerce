@@ -17,7 +17,10 @@
           <p>FREE SHIPPING on orders above $75</p>
         </div>
         <div class=" col-lg-2 col-md-2  ">
-          <p><a href=""><i class="fas fa-envelope"></i> Email Us</a></p>
+          <p>
+            <a href="">
+              <i class="fas fa-envelope"></i> Email Us</a>
+          </p>
         </div>
       </div>
     </div>
@@ -26,7 +29,9 @@
   <nav class="container">
     <div class="row">
       <div class="col-2">
-        <a href="#deco"><img src="./assets/img/fab_logo.png" alt=""></a>        
+        <a href="#deco">
+          <img src="./assets/img/fab_logo.png" alt="">
+        </a>
       </div>
       <div class="col-6">
         <form>
@@ -35,11 +40,14 @@
               <label class="sr-only" for="inlineFormInputGroup">Username</label>
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
-                  <div class="input-group-text"><i class="fas fa-search"></i></div>
+                  <div class="input-group-text">
+                    <i class="fas fa-search"></i>
+                  </div>
                 </div>
                 <input type="text" class="form-control whatShopping" id="inlineFormInputGroup" placeholder="What are you shopping for?">
                 <div class="input-group-append">
-                    <div class="input-group-text"><i class="far fa-smile"></i></div>
+                  <div class="input-group-text">
+                    <i class="far fa-smile"></i>
                   </div>
               </div>
             </div>
@@ -47,30 +55,48 @@
         </form>
       </div>
       <div>
-        <li><a href="" id="signIn">Sigin</a></li>
-        <li><a href="" id="signOut">Signout</a></li>
+        <li>
+          <a href="" id="signIn">SigIn</a>
+        </li>
+        <li>
+          <a href="" id="signOut">SignOut</a>
+        </li>
       </div>
     </div>
   </nav>
 
-  <section class="container">
+  <section class="container someCategories">
     <div class="row">
       <div class="col">
         <ul>
-          <li><a href="#new" id="vintageBtn">VINTAGE</a></li>
-          <li><a href="#homeDeco" id="homeDecoBtn">DECO</a></li>
-          <li><a href="#art" id="artBtn">ART</a></li>
-          <li><a href="#tech" id="techBtn">TECH</a></li>
-          <li><a href="#gifts" id="booksBtn">BOOKS</a></li>
-          <li><a href="#adults" id="adultsBtn">ADULTS ONLY</a></li>
-          <li><a href="https://blog.fab.com/?ref=subnav" target="_blank">JOURNAL</a></li>
+          <li>
+            <a href="#new" id="vintageBtn">VINTAGE</a>
+          </li>
+          <li>
+            <a href="#homeDeco" id="homeDecoBtn">DECO</a>
+          </li>
+          <li>
+            <a href="#art" id="artBtn">ART</a>
+          </li>
+          <li>
+            <a href="#tech" id="techBtn">TECH</a>
+          </li>
+          <li>
+            <a href="#gifts" id="booksBtn">BOOKS</a>
+          </li>
+          <li>
+            <a href="#adults" id="adultsBtn">ADULTS ONLY</a>
+          </li>
+          <li>
+            <a href="https://blog.fab.com/?ref=subnav" target="_blank">JOURNAL</a>
+          </li>
         </ul>
       </div>
-    </div>    
+    </div>
   </section>
-  
-    
+
   <div id="app" class="show"></div>
+  
   <div id="productModal" class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -82,16 +108,18 @@
         </div>
         <div class="modal-body" id="here">
         </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Buy</button>
-          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Buy</button>
         </div>
       </div>
     </div>
+  </div>
 
   <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/__/firebase/init.js"></script>
 
@@ -121,16 +149,55 @@
       </div>
       <div class="col-2">
         {{#each id}}
-        <li><button class="btn btn-warning" data-id="{{{id}}}">View</button></li>
+        <li><button class="btn btn-warning" id="view_product" data-id="{{{id}}}">View</button></li>
         {{/each}}
       </div>
     </ul>
-  </script>
+	</script>
+
+  <script id="product-template" type="text/x-handlebars-template">
+		{{data}}
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center">
+				<h5>{{title}}</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4 col-sm-4 col-md-4 col-lg-4">
+				<img src="{{secure_thumbnail}}" alt="">
+		  </div>
+			<div class="col-4 col-sm-4 col-md-4 col-lg-4">
+				<table class="table">
+					<tbody>
+						<tr>
+              <th class="row">Available:</th>
+              <td>{{available_quantity}}</td>
+            </tr>
+            <tr>
+              <th class="row text-capitalize">Condition: {{condition}}</th>
+            </tr>
+					</tbody>
+				</table>
+      </div>
+      <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th class="row">Sold:</th>
+              <td>{{sold_quantity}}</td>
+            </tr>
+            <tr>
+              <th class="row text-success">${{price}}</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+	  </script>
+
+  <script src="assets/js/productinfo.js"></script>
   <script src="./assets/js/products.js"></script>
   <script src="./assets/js/route.js"></script>
   <script src="./assets/js/router.js"></script>
   <script src="./assets/js/main.js"></script>
-  <script src="assets/js/productinfo.js"></script>
-  
 </body>
 </html>
