@@ -28,12 +28,12 @@
 
   <nav class="container">
     <div class="row">
-      <div class="col-2">
+      <div class="col-lg-2 col-md-2">
         <a href="#deco">
           <img src="./assets/img/fab_logo.png" alt="">
         </a>
       </div>
-      <div class="col-6">
+      <div class="col-lg-5 col-md-5">
         <form>
           <div class="form-row align-items-center">
             <div class="col-auto">
@@ -49,17 +49,18 @@
                   <div class="input-group-text">
                     <i class="far fa-smile"></i>
                   </div>
-              </div>
-            </div>
-          </div>
+              	</div>
+            	</div>
+						</div>
+					</div>
         </form>
       </div>
-      <div>
+      <div class='col-lg-4 col-md-4'>
         <li>
           <a href="" id="signIn">SigIn</a>
         </li>
         <li>
-          <a href="" id="signOut">SignOut</a>
+          <a href="" id="signOut"><i class="fas fa-lock"></i></a>
         </li>
       </div>
     </div>
@@ -95,7 +96,11 @@
     </div>
   </section>
     
-  <div id="app" class="show"></div>
+  <div class="show">
+		<div class="row" id="app">
+
+		</div>
+	</div>
   
   <div id="productModal" class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
@@ -131,34 +136,27 @@
 
   <script src="./assets/js/handlebars-v4.0.11.js"></script>
 
-  <script id="quote-template" type="text/x-handlebars-template">
-    <ul class="products row">
-    <div class="col-2">
-        {{#each thumb}}     
-        <li><img src="{{{thumbnail}}}" alt=""></li>
-        {{/each}}
-      </div>
-      <div class="col-4">
-        {{#each decoHome}}
-        <li>{{decoHome}}</li>
-        {{/each}}
-      </div>
-      <div class="col-2">
-        {{#each available}}
-        <li>Cantidad disponible: {{available}}</li>
-        {{/each}}
-      </div>
-      <div class="col-2">
-        {{#each price}}
-        <li>Precio: ${{price}}</li>        
-        {{/each}}
-      </div>
-      <div class="col-2">
-        {{#each id}}
-        <li><button class="btn btn-warning" id="view_product" data-id="{{{id}}}">View</button></li>
-        {{/each}}
-      </div>
-    </ul>
+	<script id="quote-template" type="text/x-handlebars-template">		
+		<div class="col-md-3 col-sm-6 col-12">
+			<div class="card-group">
+				<div class="card bg-light mb-3" style="width: 18rem;">
+						{{#each thumb}}
+					<img class="card-img-top productImg" src="{{{thumbnail}}}" alt="Card image cap">
+					{{/each}}
+					<div class="card-body">
+							{{#each decoHome}}
+						<h5 class="card-title">{{decoHome}}</h5>
+						{{/each}}
+						{{#each price}}
+						<p class="card-text price">${{price}}</p>
+						{{/each}}
+						{{#each id}}
+						<button class="btn btn-warning btnView" id="view_product" data-id="{{{id}}}">View</button>
+						{{/each}}
+					</div>
+				</div>
+			</div>
+		</div>
 	</script>
 	
 	<script id="product-template" type="text/x-handlebars-template">
