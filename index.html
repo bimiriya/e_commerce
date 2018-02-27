@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>E-Commerde</title>
+	<title>E-Commerce</title>
 	<link rel="shortcut icon" href="./assets/img/favicon_insp.ico" type="image/x-icon">
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -22,6 +22,7 @@
 			</div>
 		</div>
 	</section>
+
 	<nav class="container">
 		<div class="row">
 			<div class="col-2">
@@ -69,9 +70,25 @@
 	</section>
 	
 		
-	<div id="app">
+	<div id="app" class="show"></div>
+	<div id="productModal" class="modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Product Info</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body" id="here">
+				</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		</div>
 	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -81,29 +98,39 @@
   <script src="./assets/js/handlebars-v4.0.11.js"></script>
 
   <script id="quote-template" type="text/x-handlebars-template">
-
-    <ul class="products">
-        {{#each thumb}}
-        <li><img src="{{{thumbnail}}}" alt=""></li>
-        {{/each}}
-        {{#each decoHome}}
-        <li>{{decoHome}}</li>
-        {{/each}}
-        {{#each available}}
-        <li>Cantidad disponible: {{available}}</li>
-        {{/each}}
-        {{#each price}}
-        <li>Precio: ${{price}}</li>        
+  	<ul class="products row">
+  	<div class="col-2">
+  			{{#each thumb}}			
+  			<li><img src="{{{thumbnail}}}" alt=""></li>
+  			{{/each}}
+  		</div>
+  		<div class="col-4">
+  			{{#each decoHome}}
+  			<li>{{decoHome}}</li>
+  			{{/each}}
+  		</div>
+  		<div class="col-2">
+	    	{{#each available}}
+	    	<li>Cantidad disponible: {{available}}</li>
+	    	{{/each}}
+	    </div>
+	    <div class="col-2">
+	    	{{#each price}}
+	   	 	<li>Precio: ${{price}}</li>        
 				{{/each}}
+			</div>
+			<div class="col-2">
 				{{#each id}}
 				<li><button class="btn btn-warning" data-id="{{{id}}}">View</button></li>
 				{{/each}}
-    </ul>
+			</div>
+   	</ul>
   </script>
 	<script src="./assets/js/products.js"></script>
 	<script src="./assets/js/route.js"></script>
 	<script src="./assets/js/router.js"></script>
 	<script src="./assets/js/main.js"></script>
+	<script src="assets/js/productinfo.js"></script>
 	
 </body>
 </html>
