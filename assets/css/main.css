@@ -30,6 +30,11 @@ nav a, .show a, .someCategories a{
   text-decoration: none;
 } 
 
+.someCategories a:hover, #signIn:hover, #signOut:hover{
+  color: grey;
+  text-decoration: underline;
+}
+
 #inlineFormInputGroup{
   width: 40vh;
 }
@@ -41,13 +46,26 @@ nav a, .show a, .someCategories a{
 
 /* ------------------ INICIO PRODUCTS */
 .products{
-  border: 1px solid black;
+  width: 80%;
+  margin: 2vh auto;
+  padding: 1vh;
+  border-radius: 2vh;
+}
+
+.productImg{
+  object-fit: cover;
+  object-position: center;
 }
 
 .show li{
   list-style-type: none;  
 }
 
+.btnView{
+  background-color: black;
+  border: black;
+  color: white;
+}
 
 /* ------------------ FIN PRODUCTS */
 

@@ -36,8 +36,6 @@ function showVintage() {
             {decoHome: data.results[i].title}],
           thumb: [
             {thumbnail: data.results[i].thumbnail}],
-          available: [
-            {available: data.results[i].available_quantity}],
           price: [
             {price: data.results[i].price}],
           id: [
