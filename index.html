@@ -66,42 +66,6 @@
   </nav>
 
 
-  <section class="container">
-    <div class="row">
-      <div class="col">
-        <ul>
-          <li>
-            <a href="#new">NEW ARRIVALS</a>
-          </li>
-          <li>
-            <a href="#deco">DECO</a>
-          </li>
-          <li>
-            <a href="#art">ART</a>
-          </li>
-          <li>
-            <a href="#tech">TECH</a>
-          </li>
-          <li>
-            <a href="#gifts">GIFTS</a>
-          </li>
-          <li>
-            <a href="#adults">ADULTS ONLY</a>
-          </li>
-          <li>
-            <a href="#journal">JOURNAL</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <section>
-
-    <section id="payment">
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-        PAGA!
-      </button>
 
       <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -114,8 +78,6 @@
         </div>
       </div>
     </section>
-
-    <a href="#productinfo" class="enjaja" data-id="MLC441119392">enjaja</a>
 
     <div id="app"></div>
 
@@ -169,7 +131,7 @@
                 <td>{{available_quantity}}</td>
               </tr>
               <tr>
-                  <th class="row text-capitalize">{{condition}}</th>
+                  <th class="row text-capitalize">Condition: {{condition}}</th>
                   
                 </tr>
 						</tbody>
@@ -183,7 +145,7 @@
                       <td>{{sold_quantity}}</td>
                     </tr>
                     <tr>
-                        <th class="row text-success">{{price}}</th>
+                        <th class="row text-success">${{price}}</th>
                       </tr>
               </tbody>
             </table>
@@ -192,7 +154,7 @@
 			
 
 	  </script>
-    <script src="assets/js/productinfo.js"></script>
+    
 
 
     <section class="container">
@@ -265,7 +227,7 @@
         <li>Precio: ${{price}}</li>        
 				{{/each}}
 				{{#each id}}
-				<li><button class="btn btn-warning" data-id="{{{id}}}">View</button></li>
+				<li><button class="btn btn-warning" id="view_product" data-id="{{{id}}}">View</button></li>
 				{{/each}}
     </ul>
   </script>
@@ -273,6 +235,7 @@
     <script src="./assets/js/route.js"></script>
     <script src="./assets/js/router.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="assets/js/productinfo.js"></script>
 
 </body>
 

@@ -1,8 +1,9 @@
 const accessToken = 'APP_USR-8189733489067517-022616-f503fa00109170e4073113e15b23d6e4__G_A__-239442426';
-
-$('.enjaja').click((event) => {
-  let dataID = $(event.target).data('id');
-  getProductInfo(dataID);
+document.addEventListener('click', function(e) {
+  if (e.target.id === 'view_product') {
+    let dataID = $(e.target).data('id');
+    getProductInfo(dataID);
+  }
 });
 
 function getProductInfo(productID) {
@@ -11,7 +12,6 @@ function getProductInfo(productID) {
       return response.json();
     })
     .then((data) => {
-      console.log(data)
       fillTemplate(data);
       $('#productModal').modal();
     });
